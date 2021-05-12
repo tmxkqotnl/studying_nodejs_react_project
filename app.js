@@ -3,7 +3,9 @@ const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://Admin:ZNc4d7rE9VK9vxUK@mongodbtutorial.5lxlo.mongodb.net/react",{
+dotenv.config();
+
+mongoose.connect(`mongodb+srv://Admin:${process.env.MONGO_PASSWORD}@mongodbtutorial.5lxlo.mongodb.net/react`,{
   useNewUrlParser:true,
   useCreateIndex:true,
   useUnifiedTopology:true,
