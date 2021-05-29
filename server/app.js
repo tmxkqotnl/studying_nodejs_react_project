@@ -7,7 +7,6 @@ const cookieParser = require('cookie-parser');
 const {auth} = require('./routes/middleware');
 const {User} = require('./models/User');
 const {MONGO_URI} = require('./config/Key');
-
 dotenv.config();
 
 mongoose.connect(MONGO_URI,{

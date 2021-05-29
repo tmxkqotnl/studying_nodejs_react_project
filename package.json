@@ -2,9 +2,11 @@
   "name": "johnahn",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server/app.js",
   "scripts": {
-    "start": "nodemon app"
+    "start": "nodemon app",
+    "backend" : "nodemon app",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix  client\""
   },
   "author": "",
   "license": "MIT",
@@ -14,6 +16,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
