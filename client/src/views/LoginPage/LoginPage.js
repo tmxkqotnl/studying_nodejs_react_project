@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Axios from 'axios';
 import {useDispatch} from 'react-redux';
 import {loginUser} from '../../_actions/user_action';
+import {withRouter} from 'react-router-dom';
 
 function LoginPage(props) {
   const [email, setEmail] = useState("");
@@ -16,6 +17,7 @@ function LoginPage(props) {
   }
   const onSubmitHandler = (e)=>{
     e.preventDefault();
+    
     dispatch(loginUser({
       email:email,
       password:password,
@@ -54,4 +56,4 @@ function LoginPage(props) {
   );
 }
 
-export default LoginPage;
+export default withRouter(LoginPage);
